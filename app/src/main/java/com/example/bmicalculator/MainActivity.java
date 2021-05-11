@@ -2,8 +2,9 @@ package com.example.bmicalculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
-import android.text.Editable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,7 +15,6 @@ public class MainActivity extends AppCompatActivity {
 
     EditText heightv;
     EditText weightv;
-    TextView result;
     Button calculate;
 
     @Override
@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
 
         heightv = (EditText) findViewById(R.id.height);
         weightv = (EditText) findViewById(R.id.weight);
-        result = (TextView) findViewById(R.id.result);
         calculate = (Button) findViewById(R.id.button);
 
         calculate.setOnClickListener(new View.OnClickListener() {
@@ -51,11 +50,13 @@ public class MainActivity extends AppCompatActivity {
                         category = "Normal";
                     else if (bmi >= 25 && bmi <= 29.9)
                         category = "Over Weight";
-                    else
+                    else {
                         category = "Obese";
+                    }
+                    Intent i = new Intent(MainActivity.this,BMI.class);
+                    i.putExtra("result","Your BMI is:\n"+bmi+"\n"+category);
+                    startActivity(i);
 
-                    //Adding the result to textview
-                    result.setText("Your BMI is:\n" + bmi+"\n"+category);
                 } else {
                     Toast.makeText(MainActivity.this, "Please enter valid values", Toast.LENGTH_SHORT).show();
                 }
