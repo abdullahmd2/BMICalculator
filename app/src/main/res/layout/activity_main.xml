@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg1"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -14,7 +15,7 @@
         android:layout_marginTop="50dp"
         android:text="BMI Calculator"
         android:textAlignment="center"
-        android:textColor="@color/purple_700"
+        android:textColor="#000000"
         android:textSize="50dp" />
 
     <EditText
@@ -22,8 +23,8 @@
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:hint="Enter Weight (in Kg)"
-        android:textColor="@color/purple_500"
-        android:layout_marginTop="50dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="120dp"
         android:layout_marginLeft="80dp"
         android:padding="10dp"
         />
@@ -33,10 +34,10 @@
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_marginLeft="80dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:hint="Enter Height (in meters)"
         android:padding="10dp"
-        android:textColor="@color/purple_500" />
+        android:textColor="@color/black" />
 
     <Button
         android:id="@+id/button"
@@ -47,6 +48,7 @@
         android:gravity="center"
         android:padding="12dp"
         android:text="Calculate"
+        android:backgroundTint="#272424"
         android:textAlignment="center"
         android:textSize="15dp"
         android:textStyle="bold" />
