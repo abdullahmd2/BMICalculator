@@ -11,46 +11,47 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="35dp"
+        android:layout_gravity="center"
         android:layout_marginTop="50dp"
         android:text="BMI Calculator"
-        android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="50dp" />
 
     <EditText
         android:id="@+id/weight"
-        android:layout_width="200dp"
+        android:layout_width="300dp"
         android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
         android:hint="Enter Weight (in Kg)"
-        android:textColor="@color/black"
-        android:layout_marginTop="120dp"
-        android:layout_marginLeft="80dp"
         android:padding="10dp"
-        />
+        android:textColor="@color/black"
+        android:textColorHint="#787878" />
 
     <EditText
         android:id="@+id/height"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_marginLeft="80dp"
+        android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:hint="Enter Height (in meters)"
         android:padding="10dp"
-        android:textColor="@color/black" />
+        android:textColor="@color/black"
+        android:textColorHint="#787878" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="135dp"
-        android:layout_marginTop="50dp"
-        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#272424"
         android:padding="12dp"
         android:text="Calculate"
-        android:backgroundTint="#272424"
-        android:textAlignment="center"
+        android:textColor="@color/white"
         android:textSize="15dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:cornerRadius="100dp" />
+
 
 </LinearLayout>
